@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Prefooter from "../components/Prefooter";
+import images from "../constants/images";
 
 export default function AboutUs() {
   return (
@@ -16,23 +17,20 @@ export default function AboutUs() {
           </div>
         </div>
         <div className="row">
-          <div className="lini col-auto mx-auto d-flex align-items-baseline py-4">
+          <div className="lini col-auto mx-auto d-flex flex-wrap justify-content-center align-items-baseline gap-2 py-4">
             <Link to="/">
-              <img src="/assets/images/homelogo.png" width={30} alt="Logo" />
+              <img src={images.homelogo} width={30} alt="Logo" />
             </Link>
-            <p> </p>
-            <p>
+            <p className="mb-0">
               <Link to="/" className="text-white text-decoration-none">
                 Home
               </Link>
             </p>
-            <br />
-            <p className="text-white">&gt;</p>
-            <br />
-            <p className="text-white">About us</p>
+            <p className="text-white mb-0">&gt;</p>
+            <p className="text-white mb-0">About us</p>
           </div>
-          <div className="col-md-12 col-12 imgbox1 text-center bg-white py-5">
-            <img src="/assets/images/logo.png" width={500} height={175} alt="Be Fitness" />
+          <div className="col-md-12 col-12 logo-showcase text-center bg-white py-4 px-3">
+            <img src={images.logo} width={500} height={175} alt="Be Fitness" className="img-fluid" style={{ maxWidth: "500px" }} />
           </div>
         </div>
         <br />
@@ -65,7 +63,7 @@ export default function AboutUs() {
           <br />
           <hr />
           <br />
-          <div className="col-md-6 col-12 text-center">
+          <div className="col-md-6 col-12 text-center mb-4 mb-md-0">
             <ul>
               <strong>Values:</strong>
               <li>Passion/ Ambition</li>

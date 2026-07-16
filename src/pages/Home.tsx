@@ -1,4 +1,5 @@
 import Prefooter from "../components/Prefooter";
+import images from "../constants/images";
 
 export default function Home() {
   return (
@@ -32,21 +33,21 @@ export default function Home() {
             </div>
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <img src="/assets/images/interaccion1.png" className="d-block w-100" alt="Sesion de entrenamiento" />
+                <img src={images.interaccion1} className="d-block w-100" alt="Sesion de entrenamiento" />
                 <div className="carousel-caption d-none d-md-block">
                   <h5>let's have a session</h5>
                   <p>meet all our personal trainer and enjoy sharing time with us</p>
                 </div>
               </div>
               <div className="carousel-item">
-                <img src="/assets/images/interaccion2.png" className="d-block w-100" alt="Ofertas" />
+                <img src={images.interaccion2} className="d-block w-100" alt="Ofertas" />
                 <div className="carousel-caption d-none d-md-block">
                   <h5>offers</h5>
                   <p>we have a bunch of offers for you, don't hasite to ask for information</p>
                 </div>
               </div>
               <div className="carousel-item">
-                <img src="/assets/images/interaccion3.png" className="d-block w-100" alt="Vida saludable" />
+                <img src={images.interaccion3} className="d-block w-100" alt="Vida saludable" />
                 <div className="carousel-caption d-none d-md-block">
                   <h5>be healthy</h5>
                   <p>have a healhty body means having a balance in your feeding</p>
@@ -80,7 +81,7 @@ export default function Home() {
       <div className="container">
         <div className="row box1">
           <div className="col-md-3 col-12 order-first imgbox1">
-            <img src="/assets/images/box1.jpg" width={400} height={250} alt="Iniciar entrenamiento" />
+            <img src={images.box1} width={400} height={250} alt="Iniciar entrenamiento" />
           </div>
           <div className="col-md-9 col-12 order-last">
             <h2 className="text-center texbox1">
@@ -100,7 +101,7 @@ export default function Home() {
       <div className="container">
         <div className="row box2">
           <div className="col-md-3 col-12 order-last imgbox2">
-            <img src="/assets/images/box2.jpg" width={400} height={250} alt="Servicios" />
+            <img src={images.box2} width={400} height={250} alt="Servicios" />
           </div>
           <div className="col-md-9 col-12 order-first">
             <h2 className="text-center texbox2">Discover the services we have for you</h2>
@@ -118,7 +119,7 @@ export default function Home() {
       <div className="container">
         <div className="row box3">
           <div className="col-md-3 col-12 order-first imgbox3">
-            <img src="/assets/images/box3.jpg" width={400} height={250} alt="Alimentacion" />
+            <img src={images.box3} width={400} height={250} alt="Alimentacion" />
           </div>
           <div className="col-md-9 col-12 order-last">
             <h2 className="text-center texbox3">What foods are necessary for my training?</h2>

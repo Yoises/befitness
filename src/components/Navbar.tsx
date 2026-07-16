@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import icons from "../constants/icons";
 
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg container-fluid fixed-top">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          <img src="/assets/images/logo.png" alt="Be Fitness" width={200} height={70} />
+          <img src={icons.logo} alt="Be Fitness" width={200} height={70} className="img-fluid" style={{ maxHeight: "70px" }} />
         </Link>
         <button
           className="navbar-toggler"
@@ -77,13 +78,13 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-          <form className="d-flex" role="search">
+          <form className="d-flex mb-3 mb-lg-0" role="search">
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
             <button className="btn" type="submit">
-              <img src="/assets/images/search.svg" alt="Search" />
+              <img src={icons.search} alt="Search" />
             </button>
           </form>
-          <div id="containbtn">
+          <div id="containbtn" className="mb-3 mb-lg-0">
             <button className="buttonli btn"></button>
           </div>
         </div>

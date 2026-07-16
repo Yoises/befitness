@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Prefooter from "../components/Prefooter";
+import images from "../constants/images";
 
 interface Club {
   image: string;
@@ -7,15 +8,15 @@ interface Club {
 }
 
 const clubs: Club[] = [
-  { image: "/assets/images/gym1.jpg", name: "Club 1" },
-  { image: "/assets/images/gym2.jpg", name: "Club 2" },
-  { image: "/assets/images/gym3.png", name: "Club 3" },
-  { image: "/assets/images/gym4.jpg", name: "Club 4" },
-  { image: "/assets/images/gym5.jpg", name: "Club 5" },
-  { image: "/assets/images/gym6.jpg", name: "Club 6" },
-  { image: "/assets/images/gym7.png", name: "Club 7" },
-  { image: "/assets/images/gym8.jpg", name: "Club 8" },
-  { image: "/assets/images/gym9.jpg", name: "Club 9" },
+  { image: images.club1, name: "Club 1" },
+  { image: images.club2, name: "Club 2" },
+  { image: images.club3, name: "Club 3" },
+  { image: images.club4, name: "Club 4" },
+  { image: images.club5, name: "Club 5" },
+  { image: images.club6, name: "Club 6" },
+  { image: images.club7, name: "Club 7" },
+  { image: images.club8, name: "Club 8" },
+  { image: images.club9, name: "Club 9" },
 ];
 
 function chunk<T>(arr: T[], size: number): T[][] {
@@ -37,14 +38,14 @@ export default function Clubs() {
       <br />
       <br />
 
-      <div className="container">
-        <div className="row">
-          <img src="/assets/images/EVERYWHERE.png" alt="Be Fitness Everywhere" />
+      <div className="container-fluid p-0">
+        <div className="row g-0">
+          <img src={images.EVERYWHERE} alt="Be Fitness Everywhere" className="img-fluid w-100" />
         </div>
       </div>
-      <div className="container">
+      <div className="container py-4">
         <div className="row">
-          <div className="col-auto mx-auto text-black fw-bold text-xl-center">
+          <div className="col-auto mx-auto text-black fw-bold text-center">
             <h1>Know our Clubs</h1>
           </div>
         </div>
@@ -52,20 +53,20 @@ export default function Clubs() {
 
       {rows.map((row, rowIndex) => (
         <div className="container" key={rowIndex}>
-          <div className="row box1">
+          <div className="row box1 g-4">
             {row.map((club) => {
               const globalIndex = clubs.indexOf(club);
               return (
                 <div key={club.image} className="wrapper clearfix col-md-4 col-12 t1 imgbox1">
                   <figure
-                    className="gallery-item1"
+                    className="gallery-item1 m-0"
                     onMouseEnter={() => setHovered(globalIndex)}
                     onMouseLeave={() => setHovered(null)}
                   >
                     <img src={club.image} width={400} height={250} alt={club.name} />
                     <figcaption
                       className="img-title1"
-                      style={{ display: hovered === globalIndex ? "block" : "none" }}
+                      style={{ display: hovered === globalIndex ? "flex" : "none" }}
                     >
                       <h5>
                         {club.name} <br /> Sector
